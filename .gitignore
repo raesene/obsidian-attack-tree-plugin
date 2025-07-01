@@ -1,0 +1,57 @@
+# Node modules (very large, should not be committed)
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# dotenv environment variables
+.env
+.env.local
+.env.*.local
+
+# Output directories
+dist/
+build/
+coverage/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE specific
+.vscode/
+.idea/
+
+# Test output
+test-output/
+
+# Parcel or Next.js
+.cache/
+.next/
+out/
+
+# TypeScript
+*.tsbuildinfo
+
+# Svelte/Vite
+.svelte-kit/
+.vite/
+
+# Others (common for front-end)
+*.tgz
+.pnp
+.pnp.js
+

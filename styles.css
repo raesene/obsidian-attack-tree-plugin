@@ -1,0 +1,219 @@
+/* Attack Tree Plugin Styles */
+
+.attack-tree-main {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.attack-tree-editor-panel {
+  width: 40%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+}
+
+.attack-tree-editor-header {
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--background-secondary);
+}
+
+.attack-tree-editor-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-normal);
+}
+
+.attack-tree-editor-panel textarea {
+  flex: 1;
+  resize: none;
+  border: none;
+  padding: 15px;
+  font-family: var(--font-monospace);
+  font-size: 13px;
+  line-height: 1.5;
+  background: var(--background-primary);
+  color: var(--text-normal);
+  outline: none;
+  tab-size: 2;
+}
+
+.attack-tree-editor-panel textarea::placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.attack-tree-viz-panel {
+  width: 60%;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  background: var(--background-primary);
+}
+
+.attack-tree-viz-header {
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--background-secondary);
+}
+
+.attack-tree-viz-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-normal);
+}
+
+.attack-tree-export-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.attack-tree-export-buttons button {
+  padding: 6px 12px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  background: var(--interactive-normal);
+  color: var(--text-normal);
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s ease;
+}
+
+.attack-tree-export-buttons button:hover {
+  background: var(--interactive-hover);
+}
+
+.attack-tree-export-buttons button:active {
+  background: var(--interactive-active);
+}
+
+.attack-tree-error {
+  padding: 12px 15px;
+  color: var(--text-error);
+  background: var(--background-modifier-error);
+  border: 1px solid var(--text-error);
+  border-radius: 4px;
+  margin: 10px 15px;
+  font-family: var(--font-monospace);
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.attack-tree-render {
+  flex: 1;
+  overflow: auto;
+  padding: 15px;
+  background: var(--background-primary);
+}
+
+.attack-tree-render svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Theme selector styling */
+.attack-tree-editor-header select {
+  padding: 4px 8px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  background: var(--background-primary);
+  color: var(--text-normal);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.attack-tree-editor-header select:focus {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: -2px;
+}
+
+/* Node interaction styles */
+.attack-tree-render svg g.node:hover {
+  opacity: 0.8;
+}
+
+.attack-tree-render svg g.edge:hover {
+  opacity: 0.8;
+}
+
+/* Scrollbar styling for webkit browsers */
+.attack-tree-editor-panel textarea::-webkit-scrollbar,
+.attack-tree-render::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.attack-tree-editor-panel textarea::-webkit-scrollbar-track,
+.attack-tree-render::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+
+.attack-tree-editor-panel textarea::-webkit-scrollbar-thumb,
+.attack-tree-render::-webkit-scrollbar-thumb {
+  background: var(--background-modifier-border);
+  border-radius: 4px;
+}
+
+.attack-tree-editor-panel textarea::-webkit-scrollbar-thumb:hover,
+.attack-tree-render::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 800px) {
+  .attack-tree-main {
+    flex-direction: column;
+  }
+  
+  .attack-tree-editor-panel,
+  .attack-tree-viz-panel {
+    width: 100%;
+    min-width: unset;
+  }
+  
+  .attack-tree-editor-panel {
+    height: 40%;
+    border-right: none;
+    border-bottom: 1px solid var(--background-modifier-border);
+  }
+  
+  .attack-tree-viz-panel {
+    height: 60%;
+  }
+}
+
+/* Loading state */
+.attack-tree-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Empty state styling */
+.attack-tree-empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Syntax highlighting for YAML in editor */
+.attack-tree-editor-panel textarea.yaml-highlighted {
+  color: var(--text-normal);
+}

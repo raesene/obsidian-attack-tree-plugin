@@ -1,0 +1,10 @@
+{
+	"id": "attack-tree-plugin",
+	"name": "Attack Tree Plugin",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Visualize attack trees from YAML files using the deciduous format for security analysis and threat modeling.",
+	"author": "Attack Tree Plugin",
+	"authorUrl": "",
+	"isDesktopOnly": false
+}
